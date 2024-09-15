@@ -1,7 +1,7 @@
 # Framenotwork_SOEN341_Project_F24
 
 
-Hello from Bulat, Mathieu, Jeremie, and Jee.
+Hello from Evan, Tim, Bulat, Mathieu, Jeremie, and Jee.
 
 Welcome!
 
