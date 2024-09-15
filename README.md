@@ -1,10 +1,12 @@
-# Group4_SOEN341_Project_F24
+# Framenotwork_SOEN341_Project_F24
 
 
-Hello from Bulat, Mathieu and Jee.
+Hello from Bulat, Mathieu, Jeremie, and Jee.
 
 Welcome!
 
 Salam aleikum from Bulat!
 
 Hi from Jee!
+
+yo -jeremie
