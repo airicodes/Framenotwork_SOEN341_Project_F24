@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
+import Image from 'next/image';
 
 
 
@@ -137,18 +138,24 @@ export default function SignIn() {
         alignItems: 'center',
         height: '100%', // Adjust height as needed
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        gap:1,
       }}
     >
    
         
         <CustomCard variant="outlined" >
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Typography
             component="h1"
             variant="h4"
             sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
           >
+            
             Sign in
+  
           </Typography>
+          <Image src='/images/image.png' alt='logo' width={200} height={30}/>
+          </Box>
           <Box
             component="form"
             onSubmit={handleSubmit}
@@ -187,7 +194,7 @@ export default function SignIn() {
                 error={passwordError}
                 helperText={passwordErrorMessage}
                 name="password"
-                placeholder="••••••"
+                placeholder="••••••••"
                 type="password"
                 id="password"
                 autoComplete="current-password"
