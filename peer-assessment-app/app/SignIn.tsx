@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import concordia from './assets/images/concordia.png';
+
 
 
 // const CustomCard = styled(Card)(({ theme }) => ({
@@ -51,6 +51,7 @@ const CustomCard = styled(Card)(({ theme }) => ({
       boxShadow:
         'hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px',
     }),
+    bgColor: 'rgba(255, 255, 255, 0.95)',
   }));
 
 // const SignInContainer = styled(Stack)(({ theme }) => ({
@@ -73,14 +74,15 @@ const CustomCard = styled(Card)(({ theme }) => ({
 // }));
 
 const SignInContainer = styled(Stack)(() => ({
-    position: 'relative', // Ensure relative positioning for stacking context
-    padding: 20,
-    marginTop: '10vh',
-    minHeight: '100vh', // Ensure it has height
+    position: 'absolute', // Ensure relative positioning for stacking context
+    // padding: 10,
+    height: '100%', // Ensure it has height
     width: '100%', // Ensure it has width
-    backgroundImage: `url(${concordia})`, // Set the background image
-    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${'/images/concordia.png'})`, // Set the background image
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
+     // Overlay with a white color at 50% opacity
+    
   }));
 export default function SignIn() {
   const [emailError, setEmailError] = React.useState(false);
@@ -128,7 +130,17 @@ export default function SignIn() {
     
       
       <SignInContainer>
-        {/* <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} /> */}
+      <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%', // Adjust height as needed
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+      }}
+    >
+   
+        
         <CustomCard variant="outlined" >
           <Typography
             component="h1"
@@ -200,6 +212,7 @@ export default function SignIn() {
             </Button>
           </Box>
         </CustomCard>
+</Box>
       </SignInContainer>
   );
 }
