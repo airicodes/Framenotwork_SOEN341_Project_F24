@@ -7,12 +7,10 @@ import React from 'react';
 
 export default function Sidebar() {
 
-    // const [width, setWidth] = useState("0px");
-
     function closeSidebar() {
 
             const sidebar = document.getElementById("sidebar");
-            const navbar = document.getElementById("navbar");
+            const navbar = document.getElementById("main-container");
             const button = document.getElementById("openbtn");
             if ( sidebar!== null && navbar !== null && button !== null){
                     sidebar.style.width = "0px";
