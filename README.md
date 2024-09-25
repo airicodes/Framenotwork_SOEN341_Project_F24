@@ -1,12 +1,12 @@
-# Framenotwork_SOEN341_Project_F24
+#### Peer Assessment Application
 
+### Objective
 
-Hello from Evan, Tim, Bulat, Mathieu, Jeremie, and Jee.
-
-Welcome!
-
-Salam aleikum from Bulat!
-
-Hi from Jee!
-
-yo -jeremie
+### Team Members
+Name/ GitHub Username
+- Bulat Abdullin / bulabd
+- Jeremie Guerchon / airicodes
+- Tymofiy Kovalenko / KapJ1coH
+- Jidapa Laopikanon / jdplao
+- Evan Teboul / M-a-a-d-man
+- Mathieu Pare Vargas / 20Mathieu03

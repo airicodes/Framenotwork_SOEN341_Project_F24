@@ -62,7 +62,8 @@ export default function SignUp({ onClick }: SignUpProps) {
   const validateInputs = () => {
     const email = document.getElementById('email') as HTMLInputElement;
     const password = document.getElementById('password') as HTMLInputElement;
-    const name = document.getElementById('name') as HTMLInputElement;
+    const firstName = document.getElementById('firstName') as HTMLInputElement;
+    const lastName = document.getElementById('lastName') as HTMLInputElement;
 
     let isValid = true;
 
@@ -84,7 +85,15 @@ export default function SignUp({ onClick }: SignUpProps) {
       setPasswordErrorMessage('');
     }
 
-    if (!name.value || name.value.length < 1) {
+    if (!firstName.value || firstName.value.length < 1) {
+      setNameError(true);
+      setNameErrorMessage('Name is required.');
+      isValid = false;
+    } else {
+      setNameError(false);
+      setNameErrorMessage('');
+    }
+    if (!lastName.value || lastName.value.length < 1) {
       setNameError(true);
       setNameErrorMessage('Name is required.');
       isValid = false;
@@ -100,7 +109,7 @@ export default function SignUp({ onClick }: SignUpProps) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      name: data.get('name'),
+      firstName: data.get('firstName'),
       lastName: data.get('lastName'),
       email: data.get('email'),
       password: data.get('password'),
@@ -139,7 +148,7 @@ export default function SignUp({ onClick }: SignUpProps) {
                 <StudentInstructorToggle />
               </FormControl>
                 <FormControl>
-                  <FormLabel htmlFor="name">First name</FormLabel>
+                  <FormLabel htmlFor="firstName">First name</FormLabel>
                   <TextField
                     autoComplete="firstName"
                     name="firstName"
@@ -153,7 +162,7 @@ export default function SignUp({ onClick }: SignUpProps) {
                   />
                 </FormControl>
                 <FormControl>
-                  <FormLabel htmlFor="name">Last name</FormLabel>
+                  <FormLabel htmlFor="lastName">Last name</FormLabel>
                   <TextField
                     autoComplete="lastName"
                     name="lastName"
