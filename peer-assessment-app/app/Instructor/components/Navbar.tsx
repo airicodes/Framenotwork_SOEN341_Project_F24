@@ -14,7 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Dehaze } from '@mui/icons-material';
 
 
-function Navbar() {
+function Navbar( onClick ) {
 
   return (
     <AppBar position="static" sx={{backgroundColor: "#111"}}>
@@ -53,7 +53,7 @@ function Navbar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+                <Button sx={{ my: 2, color: 'white', display: 'block' }} onClick={onClick}>
                     <Dehaze/>
                 </Button>
           </Box>

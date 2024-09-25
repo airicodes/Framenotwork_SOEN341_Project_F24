@@ -18,7 +18,7 @@ export default function CourseCard({onClick}) {
             Info on the course.
           </Typography>
           <Typography>
-            <Avatar sx={{ bgcolor:"" }}></Avatar>
+            <Avatar sx={{ bgcolor:"", marginTop: "10px"}}></Avatar>
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,12 +1,13 @@
 'use client'
 import React, { useState } from "react";
-import Sidebar from "./components/Sidebar";
+// import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Box from "@mui/material/Box";
 import CourseCard from "./components/Course"
 // import { Divider, Stack, Typography } from "@mui/material";
 // import { Padding } from "@mui/icons-material";
 import StudentList from "./components/StudentList";
+import LeftSidebar from "./components/LeftSidebar";
 
 export default function Home() {
 
@@ -37,16 +38,6 @@ export default function Home() {
 
     return(
         <>
-        {/* <div id="main-container">
-            <div style={{paddingTop: "10px", paddingBottom: "10px", paddingLeft: "10px", width: "100%", backgroundColor:"#111"}}>
-                <button id="openbtn" className="openbtn" onClick={openSidebar}><Dehaze/></button>
-                <AccountMenu></AccountMenu>
-            </div>
-            <Box sx={{padding: "20px"}}>
-                <List />
-            </Box>
-        </div> */}
-        <Navbar/>
         {/* <Box sx={{display: "flex", flexWrap: "wrap",border: "2px solid white", margin: "80px", padding: "30px 30px 30px 30px",  gap:"7px"}}> */}
             {/* <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={2} useFlexGap sx={{ flexWrap: "wrap" }}>
                 {...components}
@@ -56,11 +47,12 @@ export default function Home() {
         </Box> */}
 
         {/* This is a template of the course dashboard to be implemented later */}
+        <LeftSidebar />
 
-        {course?<Box sx={{display: "flex", flexWrap: "wrap", margin: "40px", padding: "30px", gap:"7px"}}>
+        {course?<Box sx={{display: "flex", flexWrap: "wrap", margin: "20px", padding: "10px", gap:"7px"}}>
             <CourseCard onClick={showList}/></Box>:<StudentList/>}
         
-        <Sidebar/>
+        {/* <Sidebar/> */}
         
         </>
     );
