@@ -4,7 +4,13 @@ Duration: 100 minutes (during lab)
 
 ## Meeting Details:
 - Introduction on what the project is about 
-- Discussed the general idea of how we wanted the website to work and look like (what languages to use)
+- Discussed the general idea of how we wanted the website to work and look like (what languages to use):
+> User will have to login using an email and password, if they do not have an account, they will have to sign up by inputing their name, email and password.
+> Once they sign in, a web page will display their courses from which they can click on and see their team.
+> There, they have the option to click on any teammate and rate them based on the four dimensions or to click on their own rating to view their score.
+> Instructors will have a similar layout except for an option to create teams and assign specific students to them.
+> They will also have the option to see a list of all the participants of the course.
+
 - Created the Github repository
 - Assigned general roles
 
