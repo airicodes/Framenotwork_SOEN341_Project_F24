@@ -1,0 +1,10 @@
+# Meeting 3
+Date: 17-09-2024
+Duration: 90 minutes (at school)
+
+## Meeting Details:
+- Decided on the web pages design and how we will build the database:
+* Instructors will have an instructor id, name, email and password.
+* Students will have a student id, name, email and password.
+* Courses will have a course id, name and the id of the instructor of the course.
+* Teams will have a team id, name and the id of the corresponding course.
