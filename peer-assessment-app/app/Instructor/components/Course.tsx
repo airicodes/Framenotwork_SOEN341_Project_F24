@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { Avatar } from '@mui/material';
 
-export default function CourseCard({onClick}) {
+export default function CourseCard({ onClick }) {
   return (
     <Card sx={{ minWidth: 345 , minHeight: 150, bgcolor: "red" }}>
       <CardActionArea sx={{bgcolor: "white"}} onClick={onClick}>

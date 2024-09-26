@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from "react";
 // import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 import Box from "@mui/material/Box";
 import CourseCard from "./components/Course"
 // import { Divider, Stack, Typography } from "@mui/material";
@@ -10,26 +9,6 @@ import StudentList from "./components/StudentList";
 import LeftSidebar from "./components/LeftSidebar";
 
 export default function Home() {
-
-    // const users = [ 
-    //     "Mathieu Pare Vargas", 
-    //     "Trevys Fiorito Theriault", 
-    //     "Hocine Ait-Mohoub", 
-    //     "Samuel Giroux", 
-    //     "Sami Jouamaa Deshautels", 
-    //     "Julien Gregoire",
-    //     "Evan Teboul",
-    //     "Tim Whatever",
-    //     "Bulat Abdulin",
-    //     "Jeremy Idk ",
-    //     "Jee I forgot"
-    // ];
-
-    // const components = []
-
-    // users.forEach((user)=>{
-    //     components.push(StudentCard(user))
-    // });
 
     const [course, setCourse] = useState(true);
     const showList = () => {

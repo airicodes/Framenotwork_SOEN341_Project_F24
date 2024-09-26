@@ -15,7 +15,6 @@ import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 
 
-
 // const CustomCard = styled(Card)(({ theme }) => ({
 //   display: 'flex',
 //   flexDirection: 'column',

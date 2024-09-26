@@ -14,7 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Dehaze } from '@mui/icons-material';
 
 
-function Navbar( onClick ) {
+function Navbar({ onClick }) {
 
   return (
     <AppBar position="static" sx={{backgroundColor: "#111"}}>
