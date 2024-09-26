@@ -4,7 +4,7 @@ import { compare } from "bcrypt";
 import mysql from 'mysql2/promise';
 import GetDBSettings from "@lib/db";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
     session: {
         strategy: "jwt",
     },
@@ -85,20 +85,7 @@ export const authOptions: NextAuthOptions = {
             },
         }),
     ],
-    callbacks: {
-        async jwt({ token, user }) {
-            if (user) {
-                token.role = user.role;
-            }
-            return token;
-        },
-        async session({ session, token }) {
-            if (token && session.user) {
-                session.user.role = token.role;
-            }
-            return session;
-        },
-    },
+
 };
 
 const handler = NextAuth(authOptions);
