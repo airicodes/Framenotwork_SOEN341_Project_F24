@@ -3,12 +3,18 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 
-export default function StudentInstructorToggle() {
-    const [userType, setUserType] = React.useState('student');
-    
-    const handleAlignment = (event: React.MouseEvent<HTMLElement>, newType: string) => {
+interface StudentInstructorToggleProps {
+    onChange: (type: 'student' | 'instructor') => void;
+    userType: 'student' | 'instructor';
+}
+
+export default function StudentInstructorToggle({ onChange, userType }: StudentInstructorToggleProps) {
+    const handleAlignment = (
+        event: React.MouseEvent<HTMLElement>,
+        newType: 'student' | 'instructor' | null
+    ) => {
         if (newType !== null) {
-        setUserType(newType);
+            onChange(newType);
         }
     };
 
@@ -28,7 +34,7 @@ export default function StudentInstructorToggle() {
                 </ToggleButton>
             </ToggleButtonGroup>
             <input type="hidden" name="userType" value={userType} />
-        
+
         </>
     );
 }
