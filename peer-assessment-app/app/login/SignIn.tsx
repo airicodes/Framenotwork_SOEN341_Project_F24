@@ -14,9 +14,9 @@ import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 import StudentInstructorToggle from './student_instructor_toggle';
-import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 
 

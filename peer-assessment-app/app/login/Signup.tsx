@@ -12,8 +12,8 @@ import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
 import StudentInstructorToggle from './student_instructor_toggle';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -77,7 +77,7 @@ export default function SignUp({ onClick }: SignUpProps) {
     const validateInputs = () => {
         const email = document.getElementById('email') as HTMLInputElement;
         const password = document.getElementById('password') as HTMLInputElement;
-        const name = document.getElementById('name') as HTMLInputElement;
+        const name = document.getElementById('lastName') as HTMLInputElement;
 
         let isValid = true;
 
@@ -137,7 +137,7 @@ export default function SignUp({ onClick }: SignUpProps) {
             const result = await response.json();
 
             if (response.ok) {
-                router.push('/login');
+                router.push('/signin'); // TODO add a proper redirect
             } else {
                 // Handle registration errors (e.g., user already exists)
                 setRegistrationError(result.error || 'Registration failed.');
@@ -147,15 +147,6 @@ export default function SignUp({ onClick }: SignUpProps) {
             setRegistrationError('An unexpected error occurred.');
         }
 
-
-
-        // console.log({
-        //     name: data.get('name'),
-        //     lastName: data.get('lastName'),
-        //     email: data.get('email'),
-        //     password: data.get('password'),
-        //     userType: data.get('userType')
-        // });
     };
 
     return (
