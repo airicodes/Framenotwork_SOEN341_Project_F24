@@ -13,7 +13,7 @@ CREATE TABLE instructors (
 	i_id INT AUTO_INCREMENT PRIMARY KEY,
     i_name VARCHAR(50) NOT NULL,
     i_email VARCHAR(50) UNIQUE NOT NULL,
-    i_password VARCHAR(50) NOT NULL
+    i_password VARCHAR(60) NOT NULL
 );
 
 -- Create students table
@@ -21,7 +21,7 @@ CREATE TABLE students (
     s_id INT AUTO_INCREMENT PRIMARY KEY,
     s_name VARCHAR(50) NOT NULL,
     s_email VARCHAR(50) UNIQUE NOT NULL,
-    s_password VARCHAR(50) NOT NULL
+    s_password VARCHAR(60) NOT NULL
 );
 
 -- Create courses table
