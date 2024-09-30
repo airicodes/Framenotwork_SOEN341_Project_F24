@@ -23,12 +23,12 @@ export default function AccountMenu() {
   };
   return (
     <React.Fragment>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', float: "right", marginRight: "20px" }}>
+      <Box sx={{display: 'flex', alignItems: 'center', textAlign: 'center', float: "right", marginRight: "20px" }}>
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2 }}
+            sx={{ ml: 2 , right: "20px"}}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
