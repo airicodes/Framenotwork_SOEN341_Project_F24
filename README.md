@@ -29,6 +29,12 @@ Name/ GitHub Username > roles
 ## Installation
 
 <!--  Add any technical requirements needed for the project -->
+- Clone the repository
+- Install required repositories with `npm install`
+- Launch the MySql server with the scripts in the MySQL scripts folder.
+- Build the application using `npm run build`
+- Launch the Next.js server with `npm run start`
+- Access it in your browser.
 
 ## Known issues and limitations
 
