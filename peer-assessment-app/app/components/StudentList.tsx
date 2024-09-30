@@ -18,6 +18,8 @@ const columns: GridColDef[] = [
 
 ];
 
+
+{/**TODO: This is temporary and will be removed and replaced with data from the Database. */}
 const rows = [
   { id:1, s_id: 1, s_lastName: 'Snow', s_firstName: 'Jon', s_email: "snow.jon@got.com" },
   { id:2, s_id: 2, s_lastName: 'Lannister', s_firstName: 'Cersei', s_email: "lannister.cersei@got.com" },
