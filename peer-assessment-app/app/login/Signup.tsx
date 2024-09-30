@@ -48,9 +48,10 @@ const Card = styled(MuiCard)(({ theme }) => ({
 // }));
 interface SignUpProps {
     onClick: () => void;
+    openAlert: ()=>void;
 }
 
-export default function SignUp({ onClick }: SignUpProps) {
+export default function SignUp({ onClick, openAlert }: SignUpProps) {
     //   const [mode, setMode] = React.useState<PaletteMode>('light');
     //   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
     //   const defaultTheme = createTheme({ palette: { mode } });
@@ -138,6 +139,10 @@ export default function SignUp({ onClick }: SignUpProps) {
 
             if (response.ok) {
                 router.push('/signin'); // TODO add a proper redirect
+                
+                onClick();
+                openAlert();
+
             } else {
                 // Handle registration errors (e.g., user already exists)
                 setRegistrationError(result.error || 'Registration failed.');
