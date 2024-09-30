@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { Avatar, Divider, Link } from '@mui/material';
-import { redirect } from 'next/dist/server/api-utils';
 
 export default function CourseCard({onClick}) {
   return (
@@ -19,9 +18,7 @@ export default function CourseCard({onClick}) {
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             Info on the course.
           </Typography>
-          <Typography>
-            <Avatar sx={{ bgcolor:"", margin: "5px", float: "right"}}></Avatar>
-          </Typography>
+          <Avatar sx={{ bgcolor:"", margin: "5px", float: "right"}}></Avatar>
         </CardContent>
       </CardActionArea>
     </Card>

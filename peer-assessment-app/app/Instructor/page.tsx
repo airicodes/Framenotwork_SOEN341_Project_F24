@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 // import Sidebar from "./components/Sidebar";
 import Box from "@mui/material/Box";
-import CourseCard from "./components/Course"
+import CourseCard from "../components/Course"
 // import { Divider, Stack, Typography } from "@mui/material";
 // import { Padding } from "@mui/icons-material";
-import StudentList from "./components/StudentList";
-import LeftSidebar from "./components/LeftSidebar";
+import StudentList from "../components/StudentList";
+import LeftSidebar from "../components/LeftSidebar";
 import { Divider, Typography } from "@mui/material";
 
 export default function Home() {
