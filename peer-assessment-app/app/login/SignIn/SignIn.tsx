@@ -13,7 +13,7 @@ import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
-import StudentInstructorToggle from './student_instructor_toggle';
+import StudentInstructorToggle from '../student_instructor_toggle';
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
@@ -106,11 +106,11 @@ const SignInContainer = styled(Stack)(() => ({
     // Overlay with a white color at 50% opacity
 
 }));
-interface SignInProps {
-    onClick: () => void;
-}
+// interface SignInProps {
+//     onClick: () => void;
+// }
 
-export default function SignIn({ onClick }: SignInProps) {
+export default function SignIn() {
     const [emailError, setEmailError] = React.useState(false);
     const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
     const [passwordError, setPasswordError] = React.useState(false);
@@ -270,10 +270,10 @@ export default function SignIn({ onClick }: SignInProps) {
                     Don&apos;t have an account?{' '}
                     <span>
                         <Link
-                            component="button"
+                            href="/login/Signup"
                             variant="body2"
                             sx={{ alignSelf: 'center' }}
-                            onClick={onClick}
+                            
                         >
                             Sign up
                         </Link>

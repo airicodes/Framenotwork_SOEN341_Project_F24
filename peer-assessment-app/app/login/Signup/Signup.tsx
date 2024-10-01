@@ -11,7 +11,7 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
-import StudentInstructorToggle from './student_instructor_toggle';
+import StudentInstructorToggle from '../student_instructor_toggle';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 
@@ -46,12 +46,11 @@ const Card = styled(MuiCard)(({ theme }) => ({
 //       'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
 //   }),
 // }));
-interface SignUpProps {
-    onClick: () => void;
-    openAlert: ()=>void;
-}
+// interface SignUpProps {
+//     openAlert: ()=>void;
+// }
 
-export default function SignUp({ onClick, openAlert }: SignUpProps) {
+export default function SignUp() {
     //   const [mode, setMode] = React.useState<PaletteMode>('light');
     //   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
     //   const defaultTheme = createTheme({ palette: { mode } });
@@ -138,10 +137,11 @@ export default function SignUp({ onClick, openAlert }: SignUpProps) {
             const result = await response.json();
 
             if (response.ok) {
-                router.push('/signin'); // TODO add a proper redirect
+                // openAlert();
+                router.push('/login/SignIn'); // TODO add a proper redirect
+                // onClick();
+                // router.push('/signin');
                 
-                onClick();
-                openAlert();
 
             } else {
                 // Handle registration errors (e.g., user already exists)
@@ -260,10 +260,9 @@ export default function SignUp({ onClick, openAlert }: SignUpProps) {
                         Already have an account?{' '}
                         <span>
                             <Link
-                                component="button"
+                                href="/login/SignIn"
                                 variant="body2"
                                 sx={{ alignSelf: 'center' }}
-                                onClick={onClick}
                             >
                                 Sign in
                             </Link>
