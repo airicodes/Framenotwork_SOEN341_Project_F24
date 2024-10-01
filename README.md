@@ -30,11 +30,11 @@ Name/ GitHub Username > roles
 
 <!--  Add any technical requirements needed for the project -->
 - Clone the repository
-- Install required repositories with `npm install`
-- Launch the MySql server with the scripts in the MySQL scripts folder.
-- Build the application using `npm run build`
-- Launch the Next.js server with `npm run start`
-- Access it in your browser.
+- Open the project in your editor
+- Install required dependencies by running `npm install` in your terminal from the project folder.
+- To launch first open the folder named _peer-assessment-app_ by running `cd peer-assessment-app` in the terminal from the root folder of the project repository
+- Then launch the application on a localhost by running `npm run start` in your terminal from the _peer-assessment-app_ folder.
+- Open the landing page in your browser by copying the URL: http://localhost:3000.
 
 ## Known issues and limitations
 
