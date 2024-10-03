@@ -9,6 +9,10 @@ export interface IDBSettings {
 export default function GetDBSettings(): IDBSettings {
     const env = process.env.NODE_ENV;
 
+    console.log('host: ', process.env.host);
+    console.log('port: ', process.env.port);
+    console.log('user: ', process.env.user);
+
     if (env == 'development') {
         return {
             host: process.env.host_dev!,

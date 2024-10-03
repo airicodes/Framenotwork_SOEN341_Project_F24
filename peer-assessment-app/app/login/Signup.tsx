@@ -14,6 +14,7 @@ import Image from 'next/image';
 import StudentInstructorToggle from './student_instructor_toggle';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
+import { signIn } from 'next-auth/react';
 
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -136,8 +137,26 @@ export default function SignUp({ onClick }: SignUpProps) {
 
             const result = await response.json();
 
+            // TODO move this to a separate function that both sign in and sign up can use
             if (response.ok) {
-                router.push('/signin'); // TODO add a proper redirect
+                const result = await signIn('credentials', {
+                    redirect: false,
+                    email: data.get('email'),
+                    password: data.get('password'),
+                    userType: userType,
+                });
+
+                if (!result || result.error) {
+                    console.error('Failed to sign in');
+                    return;
+                } else {
+                    console.log('Signed in');
+                    if (data.get('userType') === 'student') {
+                        router.push('/Student');
+                    } else if (data.get('userType') === 'instructor') {
+                        router.push('/Instructor');
+                    }
+                }
             } else {
                 // Handle registration errors (e.g., user already exists)
                 setRegistrationError(result.error || 'Registration failed.');

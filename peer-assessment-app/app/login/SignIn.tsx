@@ -150,9 +150,9 @@ export default function SignIn({ onClick }: SignInProps) {
         } else {
             console.log('Signed in');
             if (data.get('userType') === 'student') {
-                router.push('/student');
+                router.push('/Student');
             } else if (data.get('userType') === 'instructor') {
-                router.push('/instructor');
+                router.push('/Instructor');
             }
         }
 
