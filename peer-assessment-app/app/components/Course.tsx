@@ -4,9 +4,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
-import { Avatar, Divider, Link } from '@mui/material';
+import { Avatar, Divider } from '@mui/material';
 
-export default function CourseCard({onClick}) {
+interface CourseCardProp {
+	onClick: () => void;
+}
+
+export default function CourseCard({onClick}: CourseCardProp) {
   return (
     <Card sx={{ minWidth: 345 , minHeight: 150, bgcolor: "lightblue" }} >
       <CardActionArea sx={{bgcolor: "white", minHeight: "140px"}} onClick={onClick} >

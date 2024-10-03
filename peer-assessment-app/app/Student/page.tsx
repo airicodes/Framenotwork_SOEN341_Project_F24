@@ -1,9 +1,8 @@
 'use client'
 import { Box, Typography } from "@mui/material";
-import AccountMenu from "../components/AccountMenu";
 import CourseCard from "../components/Course";
-import Course from "../components/Course";
 import LeftSidebar from "../components/LeftSidebar";
+import React from "react";
 
 
 export default function Home() {
@@ -19,7 +18,7 @@ export default function Home() {
                 </Typography>
                 {/* <Divider sx={{bgcolor: "black", border: "1px solid black", width: "400px", margin: ""}}/> */}
             </Box>
-            <CourseCard onClick={""}/>
+            <CourseCard onClick={() => console.log("hello")}/>
         </Box> 
         </>
     );

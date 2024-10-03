@@ -7,7 +7,7 @@ import CourseCard from "../components/Course"
 // import { Padding } from "@mui/icons-material";
 import StudentList from "../components/StudentList";
 import LeftSidebar from "../components/LeftSidebar";
-import { Divider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function Home() {
 
