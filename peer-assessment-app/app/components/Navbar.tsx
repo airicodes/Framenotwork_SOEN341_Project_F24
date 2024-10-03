@@ -13,8 +13,11 @@ import Tooltip from '@mui/material/Tooltip';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Dehaze } from '@mui/icons-material';
 
+interface NavbarProp {
+  onClick: () => void;
+}
 
-function Navbar({ onClick }) {
+function Navbar({ onClick }: NavbarProp) {
 
   return (
     <AppBar position="static" sx={{backgroundColor: "#111"}}>

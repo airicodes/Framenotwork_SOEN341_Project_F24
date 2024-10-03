@@ -11,9 +11,10 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import Image from 'next/image';
-import StudentInstructorToggle from './student_instructor_toggle';
+import StudentInstructorToggle from '../student_instructor_toggle';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
+import { signIn } from 'next-auth/react';
 
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -46,11 +47,11 @@ const Card = styled(MuiCard)(({ theme }) => ({
 //       'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
 //   }),
 // }));
-interface SignUpProps {
-    onClick: () => void;
-}
+// interface SignUpProps {
+//     openAlert: ()=>void;
+// }
 
-export default function SignUp({ onClick }: SignUpProps) {
+export default function SignUp() {
     //   const [mode, setMode] = React.useState<PaletteMode>('light');
     //   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
     //   const defaultTheme = createTheme({ palette: { mode } });
@@ -136,8 +137,26 @@ export default function SignUp({ onClick }: SignUpProps) {
 
             const result = await response.json();
 
+            // TODO move this to a separate function that both sign in and sign up can use
             if (response.ok) {
-                router.push('/signin'); // TODO add a proper redirect
+                const result = await signIn('credentials', {
+                    redirect: false,
+                    email: data.get('email'),
+                    password: data.get('password'),
+                    userType: userType,
+                });
+
+                if (!result || result.error) {
+                    console.error('Failed to sign in');
+                    return;
+                } else {
+                    console.log('Signed in');
+                    if (data.get('userType') === 'student') {
+                        router.push('/Student');
+                    } else if (data.get('userType') === 'instructor') {
+                        router.push('/Instructor');
+                    }
+                }
             } else {
                 // Handle registration errors (e.g., user already exists)
                 setRegistrationError(result.error || 'Registration failed.');
@@ -255,10 +274,9 @@ export default function SignUp({ onClick }: SignUpProps) {
                         Already have an account?{' '}
                         <span>
                             <Link
-                                component="button"
+                                href="/login/SignIn"
                                 variant="body2"
                                 sx={{ alignSelf: 'center' }}
-                                onClick={onClick}
                             >
                                 Sign in
                             </Link>

@@ -5,6 +5,7 @@ import GetDBSettings from '@lib/db';
 
 export async function POST(request: Request) {
     try {
+        console.log(GetDBSettings());
         const { firstName, lastName, email, password, userType } = await request.json();
 
         if (!firstName || !lastName || !email || !password || !userType) {

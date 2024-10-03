@@ -20,6 +20,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
@@ -96,7 +97,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex', maxHeight: "100px"}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{bgcolor: "#111"}}>
+      <AppBar position="fixed" open={open} sx={{ bgcolor: "#800020"}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -116,6 +117,7 @@ export default function PersistentDrawerLeft() {
             Concordia University
           </Typography>
         </Toolbar>
+        {/* <AccountMenu ></AccountMenu> */} {/** TODO: Fix account */}
       </AppBar>
       <Drawer
         sx={{
